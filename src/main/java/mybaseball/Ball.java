@@ -18,11 +18,18 @@ public class Ball {
     }
 
     private BallStatus resultBallStatus(Ball ball) {
-
+        if(equals(ball)){
+            return BallStatus.STRIKE;
+        }
+        if(ball.ballNo == this.ballNo) {
+            return BallStatus.BALL;
+        }
+        return BallStatus.NOTHING;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        Ball check = (Ball) obj;
+        return this == check;
     }
 }

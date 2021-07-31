@@ -1,6 +1,6 @@
 package mybaseball;
 
 public enum BallStatus {
-    NOTHING
+    NOTHING, STRIKE, BALL;
 
 }

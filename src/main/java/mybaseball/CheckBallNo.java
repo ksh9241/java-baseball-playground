@@ -10,6 +10,7 @@ public class CheckBallNo {
             throw new IllegalArgumentException("입력 범위 초과");
         }
         this.ballNo = num;
+        System.out.println("CheckBallNo.no==="+this.ballNo);
     }
 
     public int getBallNo () {
