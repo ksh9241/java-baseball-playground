@@ -13,3 +13,4 @@ Todo
 - 입력값이 1보다 작거나 9보다 크면 exception 발생 (o)
 
 - TodoList 작성 어려우면 TDD 사용없이 코딩하라고 해서 test 패키지에 숫자야구 구현.
+
