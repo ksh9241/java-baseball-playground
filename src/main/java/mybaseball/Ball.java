@@ -9,27 +9,25 @@ public class Ball {
         this. position = position;
     }
 
-    public int getBallNo() {
-        return this.ballNo.getBallNo();
-    }
-
+    // 숫자야구 체크 후 상태값 반환
     public BallStatus Play(Ball ball) {
-        return resultBallStatus(ball);
-    }
-
-    private BallStatus resultBallStatus(Ball ball) {
         if(equals(ball)){
             return BallStatus.STRIKE;
         }
-        if(ball.ballNo == this.ballNo) {
+        if(checkBall(ball)) {
             return BallStatus.BALL;
         }
         return BallStatus.NOTHING;
     }
 
+    // 숫자는 같으나 자리가 다를 경우
+    private boolean checkBall (Ball ball) {
+        return ball.ballNo.getBallNo() == this.ballNo.getBallNo();
+    }
+
     @Override
     public boolean equals(Object obj) {
         Ball check = (Ball) obj;
-        return this == check;
+        return (this.position == check.position && this.ballNo.getBallNo() == check.ballNo.getBallNo());
     }
 }

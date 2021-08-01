@@ -1,7 +1,7 @@
 package mybaseball;
 
 public class CheckBallNo {
-    private int ballNo;
+    public int ballNo;
     private final int MIN_NUM = 1;
     private final int MAX_NUM = 9;
 
@@ -10,7 +10,6 @@ public class CheckBallNo {
             throw new IllegalArgumentException("입력 범위 초과");
         }
         this.ballNo = num;
-        System.out.println("CheckBallNo.no==="+this.ballNo);
     }
 
     public int getBallNo () {
